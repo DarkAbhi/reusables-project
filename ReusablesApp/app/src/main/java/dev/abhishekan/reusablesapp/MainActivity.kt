@@ -2,7 +2,6 @@ package dev.abhishekan.reusablesapp
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import dev.abhishekan.reusablesapp.customer.CustomerActivity
 import dev.abhishekan.reusablesapp.databinding.ActivityMainBinding
@@ -16,7 +15,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -47,14 +45,21 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-        binding.debugViewBtn.setOnClickListener {
-            startActivity(
-                Intent(
-                    this,
-                    DebugViewActivity::class.java
-                )
-            )
-        }
+        binding.toolbar.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.actions_settings -> {
+                    startActivity(
+                        Intent(
+                            this,
+                            DebugViewActivity::class.java
+                        )
+                    )
+                    true
+                }
 
+                else -> false
+            }
+        }
     }
+
 }

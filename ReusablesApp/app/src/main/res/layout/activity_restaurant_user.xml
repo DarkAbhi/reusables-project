@@ -29,6 +29,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="Create Order"
+        android:backgroundTint="#493222"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/white"
+        app:cornerRadius="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

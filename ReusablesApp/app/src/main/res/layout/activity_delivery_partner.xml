@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:background="#231810"
     android:layout_height="match_parent">
 
     <com.google.android.material.button.MaterialButton
@@ -10,6 +11,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:text="For picking up delivery orders"
+        android:backgroundTint="#493222"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/white"
+        app:cornerRadius="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,6 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="For picking up return orders"
+        android:backgroundTint="#493222"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/white"
+        app:cornerRadius="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/for_picking_up_delivery_orders_btn" />
