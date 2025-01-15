@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">Reusables App</string>
-    <string name="home_heading">Manage your restaurant, your way</string>
-    <string name="home_description">You\'re in control of the food you prepare, the orders you accept, and when you want to work. It\'s all up to you.</string>
-    <string name="for_restaurants">For Restaurants</string>
-    <string name="get_started">Get started</string>
-    <string name="start">Start</string>
-    <string name="for_customers">For Customers</string>
-    <string name="order_now">Order now</string>
-    <string name="for_delivery_partners">For Delivery Partners</string>
-    <string name="start_delivering">Start delivering</string>
+    <string name="home_heading">Reusables Tracking</string>
+    <string name="home_description">Demo app for cross platform inventory tracking.</string>
+    <string name="for_restaurants">For restaurants</string>
+    <string name="get_started">To pack orders in reusables</string>
+    <string name="scan">Scan</string>
+    <string name="for_customers">For customers</string>
+    <string name="order_now">To return reusables</string>
+    <string name="for_delivery_partners">For delivery partners</string>
+    <string name="start_delivering">To pick up reusables</string>
     <string name="settings">Settings</string>
     <string name="return_these_reusables">Return these reusables</string>
+    <string name="info_text">To be available as standalone apps and APIs (for customer food apps, delivery partner apps, restaurant management apps).</string>
 </resources>
