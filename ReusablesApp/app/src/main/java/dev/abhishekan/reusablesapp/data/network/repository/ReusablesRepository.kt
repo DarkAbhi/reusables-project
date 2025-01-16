@@ -4,6 +4,7 @@ import dev.abhishekan.reusablesapp.customer.models.UpdateOrderToReturnRequest
 import dev.abhishekan.reusablesapp.customer.models.UpdateOrderToReturnResponse
 import dev.abhishekan.reusablesapp.data.network.helper.safeApiCall
 import dev.abhishekan.reusablesapp.data.network.service.ApiService
+import dev.abhishekan.reusablesapp.debug_view.models.ClearOrdersResponse
 import dev.abhishekan.reusablesapp.delivery_partner.scanner.models.UpdateOrderToCompletedRequest
 import dev.abhishekan.reusablesapp.delivery_partner.scanner.models.UpdateOrderToCompletedResponse
 import dev.abhishekan.reusablesapp.restaurants.models.CreateOrderRequest
@@ -42,6 +43,12 @@ class ReusablesRepository @Inject constructor(
     override suspend fun getLiveReturnOrders(): ResultWrapper<List<CreateOrderResponse>> {
         return safeApiCall(Dispatchers.IO) {
             apiService.getLiveReturnOrders()
+        }
+    }
+
+    override suspend fun clearAllOrders(): ResultWrapper<ClearOrdersResponse> {
+        return safeApiCall(Dispatchers.IO) {
+            apiService.clearAllOrders()
         }
     }
 

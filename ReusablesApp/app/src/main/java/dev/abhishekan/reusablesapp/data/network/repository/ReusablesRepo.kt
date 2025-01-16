@@ -2,6 +2,7 @@ package dev.abhishekan.reusablesapp.data.network.repository
 
 import dev.abhishekan.reusablesapp.customer.models.UpdateOrderToReturnRequest
 import dev.abhishekan.reusablesapp.customer.models.UpdateOrderToReturnResponse
+import dev.abhishekan.reusablesapp.debug_view.models.ClearOrdersResponse
 import dev.abhishekan.reusablesapp.delivery_partner.scanner.models.UpdateOrderToCompletedRequest
 import dev.abhishekan.reusablesapp.delivery_partner.scanner.models.UpdateOrderToCompletedResponse
 import dev.abhishekan.reusablesapp.restaurants.models.CreateOrderRequest
@@ -23,5 +24,7 @@ interface ReusablesRepo {
     ): ResultWrapper<UpdateOrderToCompletedResponse>
 
     suspend fun getLiveReturnOrders(): ResultWrapper<List<CreateOrderResponse>>
+
+    suspend fun clearAllOrders(): ResultWrapper<ClearOrdersResponse>
 
 }
