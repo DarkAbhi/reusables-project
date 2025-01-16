@@ -57,6 +57,11 @@ class RestaurantUserActivity : AppCompatActivity() {
                 when (it) {
                     State.Empty -> {}
                     is State.Failed -> {
+                        Toast.makeText(
+                            this@RestaurantUserActivity,
+                            it.message,
+                            Toast.LENGTH_LONG
+                        ).show()
                         Timber.tag("TAG").e("onCreate: ${it.message}")
                     }
 

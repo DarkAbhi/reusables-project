@@ -14,6 +14,7 @@ import com.budiyev.android.codescanner.ScanMode
 import dagger.hilt.android.AndroidEntryPoint
 import dev.abhishekan.reusablesapp.customer.models.UpdateOrderToReturnRequest
 import dev.abhishekan.reusablesapp.databinding.ActivtyCustomerBinding
+import dev.abhishekan.reusablesapp.restaurants.RestaurantUserActivity
 import dev.abhishekan.reusablesapp.vo.State
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -58,6 +59,11 @@ class CustomerActivity : AppCompatActivity() {
                 when (it) {
                     State.Empty -> {}
                     is State.Failed -> {
+                        Toast.makeText(
+                            this@CustomerActivity,
+                            it.message,
+                            Toast.LENGTH_LONG
+                        ).show()
                         Timber.tag("TAG").e("onCreate: ${it.message}")
                     }
 

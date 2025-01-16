@@ -8,6 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
 import dev.abhishekan.reusablesapp.databinding.ActivityDebugViewBinding
 import dev.abhishekan.reusablesapp.delivery_partner.scanner.DeliveryPartnerScannerActivity
+import dev.abhishekan.reusablesapp.restaurants.RestaurantUserActivity
 import dev.abhishekan.reusablesapp.vo.State
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -32,6 +33,11 @@ class DebugViewActivity : AppCompatActivity() {
                 when (it) {
                     State.Empty -> {}
                     is State.Failed -> {
+                        Toast.makeText(
+                            this@DebugViewActivity,
+                            it.message,
+                            Toast.LENGTH_LONG
+                        ).show()
                         Timber.e("onCreate: ${it.message}")
                     }
 

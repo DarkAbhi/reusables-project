@@ -9,6 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
 import dev.abhishekan.reusablesapp.databinding.ActivityDeliveryPartnerBinding
 import dev.abhishekan.reusablesapp.delivery_partner.scanner.DeliveryPartnerScannerActivity
+import dev.abhishekan.reusablesapp.restaurants.RestaurantUserActivity
 import dev.abhishekan.reusablesapp.restaurants.models.CreateOrderResponse
 import dev.abhishekan.reusablesapp.vo.State
 import kotlinx.coroutines.launch
@@ -36,6 +37,11 @@ class DeliveryPartnerActivity : AppCompatActivity() {
                 when (it) {
                     State.Empty -> {}
                     is State.Failed -> {
+                        Toast.makeText(
+                            this@DeliveryPartnerActivity,
+                            it.message,
+                            Toast.LENGTH_LONG
+                        ).show()
                         Timber.tag("TAG").e("onCreate: ${it.message}")
                     }
 
